@@ -16,6 +16,8 @@
    font-family: Rubik, sans-serif;
 }
 
+ /* Estilos para el header  */
+
 header{
    height: 15vh;
    width: 100%;
@@ -51,7 +53,7 @@ a{
    color: var(--pimary-font-color);
    text-decoration: none;
    font-size: 15px;
-
+   cursor: pointer
 }
 
 a:hover{
@@ -65,8 +67,67 @@ a:hover{
    margin-right: var(--margin-header);
 }
 
+/* Estilos para el main  */
+
+.section-head{
+   margin: var(--margin-header);
+   background-color: rgba(13, 54, 125, 0.5);
+}
+
+h2{
+   color: var(--seconadary-font-color);
+   font-size: 25px;
+   text-align: center;
+   margin: 20px 0;
+}     
+
+.hotels{
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: auto;
+         gap: 20px;
+         margin: var(--margin-header);
+}
+
+.hotel-article{
+      width: auto;
+      height: auto;
+      border: var(--pimary-background-color) solid 2px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+   }
+
+.hotel-article img{
+       width: 100%;
+       height: auto;
+       border-radius: 10px;
+       flex: 1;
+}
+.hotel-article h3{
+       color: var(--seconadary-font-color);
+       font-size: 20px;
+       
+}
+.hotel-article button{
+       background-color: var(--pimary-background-color);
+       color: var(--pimary-font-color);
+       border: none;
+       padding: 10px 20px;
+       border-radius: 5px;
+       cursor: pointer;
+       
+}
+.hotel-article button:hover{
+       color: gray;
+}
+
 @media screen and (max-width:1024px) {
     
+    /* Estilos para el header  */
    header{
       height: 12vh;
    }   
@@ -103,5 +164,5 @@ a:hover{
       height: 30px;
       width: 30px;
       margin-right: 5px;
-   }
+   }    
 }   
