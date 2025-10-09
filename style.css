@@ -1,171 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-
-:root{
-    --pimary-background-color: #0D377D;
-    --secondary-background-coloro: #ffffff;
-    --pimary-font-color: #ffffff;
-    --seconadary-font-color: #0D377D;
-    --margin-header: 20px
+:root {
+  --pimary-background-color: #0d377d;
+  --secondary-background-coloro: #ffffff;
+  --pimary-font-color: #ffffff;
+  --seconadary-font-color: #0d377d;
+  --margin-header: 20px;
 }
 
-*{
-   margin: 0;
-   padding: 0;
-   font-family: Rubik, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik, sans-serif;
 }
 
- /* Estilos para el header  */
+/* Estilos para el header  */
 
-header{
-   height: 15vh;
-   width: 100%;
-   background-color: var(--pimary-background-color);
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   position: sticky;
+header {
+  height: 15vh;
+  width: 100%;
+  background-color: var(--pimary-background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header > img {
-   height: 100%;
-   width: auto;
+  height: 100%;
+  width: auto;
 }
 
-h1{
-   color: var(--pimary-font-color);
-   font-size: 35px;
+h1 {
+  color: var(--pimary-font-color);
+  font-size: 35px;
 }
 
-#nav-list{
-   display: flex;
-   height: 35px;
-   align-items: end;
-   gap: var(--margin-header);
-   margin-right: var(--margin-header);
+#nav-list {
+  display: flex;
+  height: 35px;
+  align-items: end;
+  gap: var(--margin-header);
+  margin-right: var(--margin-header);
 }
 
-li{
-   list-style: none;
+li {
+  list-style: none;
 }
 
-a{
-   color: var(--pimary-font-color);
-   text-decoration: none;
-   font-size: 15px;
-   cursor: pointer
+a {
+  color: var(--pimary-font-color);
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-a:hover{
-   color: gray
+a:hover {
+  color: gray;
 }
 
-#menu{
-   display: none;
-   height: 40px;
-   width: 40px;
-   margin-right: var(--margin-header);
+#menu {
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin-right: var(--margin-header);
 }
 
 /* Estilos para el main  */
 
-.section-head{
-   margin: var(--margin-header);
-   background-color: rgba(13, 54, 125, 0.5);
+.section-head {
+  margin: var(--margin-header);
+  background-color: rgba(13, 54, 125, 0.5);
 }
 
-h2{
-   color: var(--seconadary-font-color);
-   font-size: 25px;
-   text-align: center;
-   margin: 20px 0;
-}     
-
-.hotels{
-         display: grid;
-         grid-template-columns: repeat(3, 300px);
-         grid-template-rows: auto;
-         row-gap: 25px;
-         align-items: center;
-         justify-items: center;
-         place-content: center;
-      }
-
-.hotel-article{
-      width: 250px;
-      height: 300px;
-      border: var(--pimary-background-color) solid 2px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-   }
-
-.hotel-article img{
-       width: 100%;
-       height: auto;
-       border-radius: 10px;
-       flex: 1;
-}
-.hotel-article h3{
-       color: var(--seconadary-font-color);
-       font-size: 20px;
-       
-}
-.hotel-article button{
-       background-color: var(--pimary-background-color);
-       color: var(--pimary-font-color);
-       border: none;
-       padding: 10px 20px;
-       border-radius: 5px;
-       cursor: pointer;
-       
-}
-.hotel-article button:hover{
-       color: gray;
+h2 {
+  color: var(--seconadary-font-color);
+  font-size: 25px;
+  text-align: center;
+  margin: 20px 0;
 }
 
-@media screen and (max-width:1024px) {
-    
-    /* Estilos para el header  */
-   header{
-      height: 12vh;
-   }   
+.hotels,
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: auto;
+  row-gap: 25px;
+  align-items: center;
+  justify-items: center;
+  place-content: center;
+}
 
-   h1{
-      font-size: 30px;
-   }
+.hotel-article,
+.restaurant-article {
+  width: 250px;
+  height: 275px;
+  border: var(--pimary-background-color) solid 2px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
 
-   header > nav{
-      display: none;
-   }
+.hotel-article img,
+.restaurant-article img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
 
-   #menu{
-      display: block;
-   }
-}   
+.hotel-article h3,
+.restaurant-article h3 {
+  color: var(--seconadary-font-color);
+  font-size: 20px;
+}
 
-@media screen and (max-width:640px) {
+.hotel-article button,
+.restaurant-article button {
+  background-color: var(--pimary-background-color);
+  color: var(--pimary-font-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hotel-article button:hover,
+.restaurant-article button:hover {
+  color: gray;
+}
 
-   header{
-      height: 10vh;
-   }   
+@media screen and (max-width: 1024px) {
+  /* Estilos para el header  */
+  header {
+    height: 12vh;
+  }
 
-   h1{
-      font-size: 20px;
-   }
+  h1 {
+    font-size: 30px;
+  }
 
-   header > nav{
-      display: none;
-   }
+  header > nav {
+    display: none;
+  }
 
-   #menu{
-      display: block;
-      height: 30px;
-      width: 30px;
-      margin-right: 5px;
-   }    
-}   
+  #menu {
+    display: block;
+  }
+
+  .hotels,
+  .restaurants {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  header {
+    height: 10vh;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  header > nav {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+  }
+
+  .hotels,
+  .restaurants {
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: auto;
+  }
+}
